@@ -17,7 +17,7 @@ function noticias() {
         "url": "https://hipertextual.com/2022/11/el-salvador-comprara-un-bitcoin-por-dia",
         "urlToImage": "https://imgs.hipertextual.com/wp-content/uploads/2022/11/bukele-scaled.jpg",
         "publishedAt": "2022-11-17T16:21:15Z",
-        "content": "Hacía rato que Nayib Bukele, el presidente de , no hacía anuncios rimbombantes sobre el Bitcoin; pero ha vuelto al ruedo. Es que el mandatario anunció en Twitter que, desde hoy, el país ce… [+3721 chars]"
+        "content": "Hacía rato que Nayib Bukele, el presidente de El Salvador, no hacía anuncios rimbombantes sobre el Bitcoin; pero ha vuelto al ruedo. Es que el mandatario anunció en Twitter que, desde hoy, el país ce… [+3721 chars]"
       },
       {
         "source": {
