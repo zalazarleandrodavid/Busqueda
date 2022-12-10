@@ -25,7 +25,7 @@ function Search() {
   const [usuarios, setUsuarios] = useState([]);
   const [busqueda, setBusqueda] = useState("portugal");
   
-  const url=(`https://newsapi.org/v2/everything?q=${busqueda}&apiKey=3e3a42ae65bf4c1eb11a815c85fe7c0e&page=1&pageSize=10&language=es`)
+  const url=(`https://newsapi.org/v2/everything?q=${busqueda}&apiKey=3e3a42ae65bf4c1eb11a815c85fe7c0e&page=1&language=es`)
     const showdata =async() =>{
       const response = await fetch(url)
       const data = await response.json()
