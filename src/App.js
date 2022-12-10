@@ -2,6 +2,9 @@ import './App.css';
 import Search from './components/search/Search';
 import Loanding from './components/loanding/Loanding';
 import Noticias from './components/noticias/Noticias';
+import Paginador from './components/paginador/Paginador';
+
+
 
 
 function App() {
@@ -10,6 +13,8 @@ function App() {
       <Search/>
       <Loanding/>
       <Noticias/>
+      <Paginador/>
+
 
     </div>
   );
