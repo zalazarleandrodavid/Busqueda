@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Button } from "react-bootstrap";
 import axios from "axios";
-import Search from '../search/Search';
 import { useEffect, useState } from 'react';
 
 
