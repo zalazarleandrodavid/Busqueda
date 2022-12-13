@@ -7,6 +7,7 @@ import Paginador from "../paginador/Paginador";
 import noticias from "../noticias/Noticias";
 
 
+
 function Search() {
 
   const [usuarios, setUsuarios] = useState([]);
@@ -19,14 +20,16 @@ function Search() {
           setUsuarios(response.data);
           setTablaUsuarios(response.data)
         }).catch(error => {
-        //console.log(error);
+        console.log(error);
         })
     }
     useEffect(() => {
       peticionGet();
     }, []) 
 
-    
+    const handleChange=e=>{
+      setBusqueda(e.target.value);
+    }
     //const url=(`https://newsapi.org/v2/everything?q=${busqueda}&apiKey=93ec34e03d6f4d769b150cc027fc47ee&page=1&language=es&pageSize=10&language=es`)
   
     //const showdata =async() =>{
@@ -37,21 +40,23 @@ function Search() {
     //showdata()
   
 
+      
   return (
     <>
       <h1>Buscador de Noticia</h1>
       <div>
-        <div className="input-group mb-3">
+        <div className="containerInput">
 
-          <input type="text" className="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1"
-            onChange={(event) => setBusqueda(event.target.value)}
+          <input type="text" className="form-control inputBuscar" placeholder="Buscar Noticia" aria-label="Username" aria-describedby="basic-addon1"
+            value={busqueda}
+            onChange={handleChange}
 
           />
           {busqueda.length >= 3 &&
 
             <Button onClick={peticionGet}>buscar</Button>
           }
-
+          
 
         </div>
 
