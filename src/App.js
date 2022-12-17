@@ -13,8 +13,8 @@ function App() {
       <Search/>
       
       
-      <Paginador/>
-
+     {/*  <Paginador/>
+ */}
 
     </div>
   );
