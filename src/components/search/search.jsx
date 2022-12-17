@@ -1,12 +1,6 @@
 import React from "react";
-import { useEffect, useState } from 'react';
-import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Button } from "react-bootstrap";
-import Paginador from "../paginador/Paginador";
-import Noticias from "../noticias/Noticias"
-import { DateTime } from 'luxon';
-
 
 const Search = ({ setSearchTerm, searchTerm, totalResults, setCurrentPage, setLoading, search }) => {
 
@@ -21,8 +15,6 @@ const Search = ({ setSearchTerm, searchTerm, totalResults, setCurrentPage, setLo
     search();
   }
 
-
-
   return (
     <div className="mx-auto ">
       <form onSubmit={handleSubmit} className="my-3" style={{ marginLeft: "35%" }}>
@@ -32,7 +24,6 @@ const Search = ({ setSearchTerm, searchTerm, totalResults, setCurrentPage, setLo
             value={searchTerm}
             onChange={handleChange}
             style={{ padding: "0.25rem" }}
-
           />
           <Button type="submit" className="mx-3" disabled={searchTerm.length < 3}>Buscar</Button>
         </div>
