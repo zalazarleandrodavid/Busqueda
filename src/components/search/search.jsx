@@ -4,7 +4,7 @@ import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Button } from "react-bootstrap";
 import Paginador from "../paginador/Paginador";
-import noticias from "../noticias/Noticias";
+import Noticias from "../noticias/Noticias"
 import { DateTime } from 'luxon';
 import Spinner from 'react-bootstrap/Spinner';
 
@@ -63,10 +63,11 @@ const Search = () => {
         </div>
 
       )}
+      {/* <Spinner animation="border" variant="primary" size="xl" style={{ marginLeft: "30%", padding:"20%" }} /> */}
       {loading ? (
-        <Spinner animation="border" />
+        <Spinner animation="border" variant="primary" size="xl" style={{ marginLeft: "30%", padding:"20%" }} />
       ) : (
-        searchResults.map((result) => (
+        /* searchResults.map((result) => (
           <div key={result.title}>
             <h3>{result.title}</h3>
             <p>{result.description}</p>
@@ -75,7 +76,9 @@ const Search = () => {
             </p>
             <a href={result.url} target="_blank" rel="noopener noreferrer">Ampliar</a>
           </div>
-        ))
+        )) */
+        <Noticias datos={searchResults} />
+
       )}
       {totalPages > 1 && (
         <Paginador
