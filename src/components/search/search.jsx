@@ -44,7 +44,7 @@ const Search = () => {
   };
 
   return (
-    <div>
+    <div className="mx-auto bg-success text-white">
       <form onSubmit={handleSubmit}>
         <input
           type="text"
