@@ -3,25 +3,14 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Card from 'react-bootstrap/Card';
 import { DateTime } from 'luxon';
 function Noticias({ datos }) {
-  console.log('asas', datos);
+  /*  console.log('asas', datos); */
 
   const mostrar = () => {
 
-    const tabla = datos.map(elem => {
+    const card = datos.map(elem => {
 
-      /* return (
-        <tr key={elem.name}>
-          <td>{elem.author}</td>
-          <td>{elem.title}</td>
-          <td></td>
-          <td>
-            <a href={elem.url} target="_blank" rel="noopener noreferrer">Ampliar</a>
-          </td>
-        </tr> 
-        
-      ) */
       return (
-        <Card style={{ marginTop:'15px', marginLeft:'5px', marginRight:'5px', marginBottom:'5px' }}  >
+        <Card style={{ marginTop: '15px', marginLeft: '5px', marginRight: '5px', marginBottom: '5px' }}  >
 
           <Card.Body>
             <Card.Title>
@@ -43,7 +32,7 @@ function Noticias({ datos }) {
         </Card>
       )
     })
-    return tabla
+    return card
   };
 
   return (
