@@ -21,20 +21,15 @@ const Search = () => {
     event.preventDefault();
     setLoading(true);
     // Realizar la búsqueda aquí utilizando la API de NewsAPI
-  }
-
-  useEffect(() => {
     const fetchData = async () => {
       const result = await axios(
-        `https://newsapi.org/v2/everything?q=${searchTerm}&apiKey=93ec34e03d6f4d769b150cc027fc47ee&page=1&language=es&pageSize=10&language=es`
+        `https://newsapi.org/v2/everything?q=${searchTerm}&apiKey=3e3a42ae65bf4c1eb11a815c85fe7c0e&page=1&language=es&pageSize=10&language=es`
       );
       setSearchResults(result.data.articles);
       setLoading(false);
     };
-    if (searchTerm) {
-      fetchData();
-    }
-  }, [searchTerm]);
+    fetchData();
+  }
 
   return (
     <div>
