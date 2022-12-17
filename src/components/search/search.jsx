@@ -44,21 +44,25 @@ const Search = () => {
   };
 
   return (
-    <div className="mx-auto bg-success text-white">
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          value={searchTerm}
-          onChange={handleChange}
-        />
+    <div className="mx-auto ">
+      <form onSubmit={handleSubmit} className="my-3" style={{ marginLeft: "35%" }}>
+        <div className="mx-3">
+          <input
+            type="text"
+            value={searchTerm}
+            onChange={handleChange}
+            style={{ padding: "0.25rem" }}
 
-        <button type="submit" disabled={searchTerm.length <= 3}>Buscar</button>
-        {totalResults > 0 && (
-        <p>Está viendo 10 noticias de {totalResults} resultados</p>
-      )}
-
+          />
+          <Button type="submit" className="mx-3" disabled={searchTerm.length < 3}>Buscar</Button>
+        </div>
       </form>
+      {totalResults > 0 && (
+        <div className="my-3" >
+          <h4 style={{ marginLeft: "30%" }}>Está viendo 10 noticias de {totalResults} resultados</h4>
+        </div>
 
+      )}
       {loading ? (
         <Spinner animation="border" />
       ) : (
