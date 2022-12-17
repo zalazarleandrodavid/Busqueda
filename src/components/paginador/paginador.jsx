@@ -1,20 +1,20 @@
-import React, { Component } from 'react';
-import { Button } from "react-bootstrap";
-import axios from "axios";
-import { useEffect, useState } from 'react';
+import React from 'react';
 
+const Paginador = (props) => {
+  const { totalPages, currentPage, handlePageChange } = props;
 
-const Paginador = ({ increment, decrement, page }) => {
   return (
-    <>
-    <button onClick={decrement}>Anterior</button>
-    <button onClick={increment}>Siguiente</button>
-    </>
+    <div>
+      {currentPage > 1 && <button onClick={() => handlePageChange(currentPage - 1)}>Anterior</button> }
+      {currentPage}  {totalPages}
+      {currentPage < totalPages && <button onClick={() => handlePageChange(currentPage + 1)}>Siguiente</button>}
       
-  )
+    </div>
+    
+  );
 }
 
 export default Paginador;
-  
+
   
 
