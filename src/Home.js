@@ -1,6 +1,6 @@
 import './App.css';
 import Search from './components/search/search.jsx';
-import Noticias from './components/noticias/Noticias';
+import Noticias from './components/noticias/noticias.jsx';
 import Paginador from './components/paginador/Paginador';
 import { useState } from 'react';
 import Spinner from 'react-bootstrap/Spinner';
