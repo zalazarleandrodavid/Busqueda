@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Paginador debería renderizar el componente 1`] = `
+<div>
+  <div
+    style="margin-left: 40%; margin-bottom: 1%; margin-top: 0.5%;"
+  >
+    <span
+      style="font-size: 30px;"
+    />
+      
+     
+    <span />
+  </div>
+</div>
+`;
