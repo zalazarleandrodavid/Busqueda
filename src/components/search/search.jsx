@@ -23,9 +23,10 @@ const Search = ({ setSearchTerm, searchTerm, totalResults, setCurrentPage, setLo
             type="text"
             value={searchTerm}
             onChange={handleChange}
-            style={{ padding: "0.25rem" }}
+            placeholder="Buscar Noticias"
+            style={{ padding: "0.25rem", width: "30%", borderRadius: "5px 5px 5px 5px" }}
           />
-          <Button type="submit" className="mx-3" disabled={searchTerm.length < 3}>Buscar</Button>
+          <Button type="submit" className="mx-3" disabled={searchTerm.length < 3} style={{ padding: "0.3rem", }}>Buscar</Button>
         </div>
       </form>
 

@@ -23,7 +23,7 @@ function Noticias({ datos }) {
 
                 <Card.Text>
                   {elem.description}
-                  <p style={{ color: '#1fbb1f' }}>
+                  <p className="pt-5" style={{ color: '#1fbb1f' }}>
                     Fecha de publicación:
                     <span >
                       &nbsp;{DateTime.fromISO(elem.publishedAt).toLocaleString(DateTime.DATE_FULL)} &nbsp;

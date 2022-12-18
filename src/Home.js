@@ -6,7 +6,7 @@ import { useState } from 'react';
 import Spinner from 'react-bootstrap/Spinner';
 import axios from "axios";
 import logo from "./logo2.png";
-
+import { Row, Col } from "react-bootstrap"
 function Home() {
 
   const [searchTerm, setSearchTerm] = useState('');
@@ -43,7 +43,15 @@ function Home() {
   return (
     <>
       <div className="App" style={{ backgroundColor: "#F9F2F0" }}>
-        <img src={logo} style={{ marginBottom: "1%", marginTop: "1%", marginLeft: "2%" }} ></img>
+        <Row className='pt-2'>
+          <Col>
+            <img src={logo} style={{ marginBottom: "1%", marginTop: "1%", marginLeft: "2%" }} ></img>
+          </Col>
+          <Col xl={7}>
+            <h2>Noticias</h2>
+          </Col>
+        </Row>
+
         <Search setSearchTerm={(elem) => { setSearchTerm(elem) }} searchTerm={searchTerm}
           setLoading={(elem) => { setLoading(elem) }}
           setCurrentPage={(elem) => { setCurrentPage(elem) }}
@@ -66,7 +74,8 @@ function Home() {
             handlePageChange={handlePageChange}
           />
         )}
-        <footer className='mb-2 text-uppercase font-weight-bold text-info' style={{ marginLeft: "85%", marginBottom: "0.5%", marginTop: totalPages > 1 ? "0.5%" : "55%" }}>Informatorio 2022</footer>
+        <footer className='mb-2 text-uppercase font-weight-bold text-info'
+          style={{ marginLeft: "85%", marginBottom: "0.5%", marginTop: totalPages > 1 ? "0.5%" : "40%" }}>Informatorio 2022</footer>
       </div>
 
     </>
