@@ -17,6 +17,7 @@ function Noticias({ datos }) {
                 {elem.title}
               </a>
             </Card.Title>
+            <img src={elem.urlToImage} alt="Imagen de la noticia" style={{ width: '150px', height: '150px' }} />
             <Card.Text>
               {elem.description}
               <p style={{ color: '#1fbb1f' }}>
